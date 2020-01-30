@@ -58,28 +58,29 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return age == student.age &&
-                Objects.equals(FIRST_NAME, student.FIRST_NAME) &&
-                Objects.equals(LAST_NAME, student.LAST_NAME) &&
-                Objects.equals(phoneNumber, student.phoneNumber) &&
-                faculty == student.faculty;
+        return Objects.equals(FIRST_NAME, student.FIRST_NAME) &&
+                Objects.equals(LAST_NAME, student.LAST_NAME);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(FIRST_NAME, LAST_NAME, age, phoneNumber, faculty);
+        return Objects.hash(FIRST_NAME, LAST_NAME);
+    }
+
+    @Override
+    public String toString() {
+        return this.getFIRST_NAME() + " " + this.getLAST_NAME();
     }
 
     /*getting students with the same full name, counting them and adding to a map*/
-    public static Map<String, Integer> getStudentsNumberWithSameFullName(List<Student> studentList) {
-        Map<String, Integer> studentsMap = new HashMap<>();
+    public static Map<Student, Integer> getStudentsNumberWithSameFullName(List<Student> studentList) {
+        Map<Student, Integer> studentsMap = new HashMap<>();
         if (studentList != null) {
             for (Student student : studentList) {
-                String fullName = student.getFIRST_NAME() + " " + student.getLAST_NAME();
-                if (studentsMap.containsKey(fullName)) {
-                    studentsMap.replace(fullName, studentsMap.get(fullName) + 1);
+                if (studentsMap.containsKey(student)) {
+                    studentsMap.replace(student, studentsMap.get(student) + 1);
                 } else {
-                    studentsMap.put(fullName, 1);
+                    studentsMap.put(student, 1);
                 }
             }
         }
