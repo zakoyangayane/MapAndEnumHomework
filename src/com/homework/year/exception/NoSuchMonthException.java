@@ -1,4 +1,4 @@
-package com.homework.year.exceptions;
+package com.homework.year.exception;
 
 public class NoSuchMonthException extends RuntimeException {
     @Override

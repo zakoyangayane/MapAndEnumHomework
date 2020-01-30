@@ -1,7 +1,7 @@
-package com.homework.students;
+package com.homework.student;
 
-import com.homework.students.model.Student;
-import com.homework.students.service.StudentService;
+import com.homework.student.model.Student;
+import com.homework.student.service.StudentService;
 
 public class Test {
 

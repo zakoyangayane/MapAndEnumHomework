@@ -1,4 +1,4 @@
-package com.homework.students.model;
+package com.homework.student.model;
 
 import java.util.HashMap;
 import java.util.List;
@@ -10,9 +10,9 @@ public class Student {
     private final String LAST_NAME;
     private int age;
     private String phoneNumber;
-    private Faculties faculty;
+    private Faculty faculty;
 
-    public Student(String firstName, String lastName, int age, String phoneNumber, Faculties faculty) {
+    public Student(String firstName, String lastName, int age, String phoneNumber, Faculty faculty) {
         this.FIRST_NAME = firstName;
         this.LAST_NAME = lastName;
         setAge(age);
@@ -37,11 +37,11 @@ public class Student {
         this.phoneNumber = phoneNumber;
     }
 
-    public Faculties getFaculty() {
+    public Faculty getFaculty() {
         return faculty;
     }
 
-    public void setFaculty(Faculties faculty) {
+    public void setFaculty(Faculty faculty) {
         this.faculty = faculty;
     }
 
@@ -87,8 +87,8 @@ public class Student {
     }
 
     /*getting number of students studying in the same faculty */
-    public static Map<Enum<Faculties>, Integer> getStudentsNumberFromSameFaculty(List<Student> studentList) {
-        Map<Enum<Faculties>, Integer> facultiesMap = new HashMap<>();
+    public static Map<Enum<Faculty>, Integer> getStudentsNumberFromSameFaculty(List<Student> studentList) {
+        Map<Enum<Faculty>, Integer> facultiesMap = new HashMap<>();
         if (studentList != null) {
             for (Student student : studentList) {
                 if (facultiesMap.containsKey(student.getFaculty())) {

@@ -1,6 +1,6 @@
-package com.homework.students.model;
+package com.homework.student.model;
 
-public enum Faculties {
+public enum Faculty {
     appliedMathematicsAndInformatics,
     physics,
     philosophy

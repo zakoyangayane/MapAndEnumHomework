@@ -1,7 +1,7 @@
 package com.homework.year.model;
 
-import com.homework.year.exceptions.NoSuchDayInMonthException;
-import com.homework.year.exceptions.NoSuchMonthException;
+import com.homework.year.exception.NoSuchDayInMonthException;
+import com.homework.year.exception.NoSuchMonthException;
 
 import java.util.Arrays;
 
