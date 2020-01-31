@@ -78,7 +78,7 @@ public class Student {
         if (studentList != null) {
             for (Student student : studentList) {
                 if (studentsMap.containsKey(student)) {
-                    studentsMap.replace(student, studentsMap.get(student) + 1);
+                    studentsMap.put(student, studentsMap.get(student) + 1);
                 } else {
                     studentsMap.put(student, 1);
                 }
@@ -93,7 +93,7 @@ public class Student {
         if (studentList != null) {
             for (Student student : studentList) {
                 if (facultiesMap.containsKey(student.getFaculty())) {
-                    facultiesMap.replace(student.getFaculty(), facultiesMap.get(student.getFaculty()) + 1);
+                    facultiesMap.put(student.getFaculty(), facultiesMap.get(student.getFaculty()) + 1);
                 } else {
                     facultiesMap.put(student.getFaculty(), 1);
                 }
