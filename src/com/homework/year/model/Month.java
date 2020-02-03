@@ -77,6 +77,15 @@ public enum Month {
         return false;
     }
 
+    public static void printMessageOfWhetherHoliday(Month month, int day) {
+        System.out.print(month.name() + " " + day);
+        if (checkWhetherHoliday(month, day)) {
+            System.out.println(" is a holiday");
+        } else {
+            System.out.println(" is not a holiday");
+        }
+    }
+
     /*get the number of holidays in month*/
     public static int numberOfHolidaysInMonth(Month month) {
         if (month == null) {

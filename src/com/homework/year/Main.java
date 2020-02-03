@@ -24,9 +24,7 @@ public class Main {
         Month.traverseName(monthService.months);
 
         //check whether the current day is a public holiday or not
-        System.out.println(Month.checkWhetherHoliday(Month.MARCH, 21) ?
-                "March 21 is holiday" : "March 21 isn't a holiday");
-        System.out.println(Month.checkWhetherHoliday(Month.MARCH, 8) ?
-                "March 8 is a holiday" : "March 8 isn't a holiday");
+        Month.printMessageOfWhetherHoliday(Month.MARCH, 21);
+        Month.printMessageOfWhetherHoliday(Month.MARCH, 8);
     }
 }
