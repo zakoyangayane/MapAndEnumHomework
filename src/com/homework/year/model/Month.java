@@ -41,8 +41,10 @@ public enum Month {
     }
 
     public void setDaysInMonth(int daysInMonth) {
-        if (daysInMonth >= 28) {
+        if (daysInMonth >= 28 && daysInMonth <= 31) {
             this.daysInMonth = daysInMonth;
+        } else {
+            throw new IllegalArgumentException("Number of days in a month should be between 28 and 31");
         }
     }
 
@@ -85,14 +87,6 @@ public enum Month {
 
     /*traverse the name of a month*/
     public static void traverseName(Month[] month) {
-//        if (month == null) {
-//            throw new NoSuchMonthException();
-//        }
-//        String traverse = "";
-//        for (int i = month.name().length() - 1; i >= 0; i--) {
-//            traverse += month.name().charAt(i);
-//        }
-//        return traverse.toLowerCase();
         for (int i = 0; i < month.length; i++) {
             System.out.println(month[i].name());
         }
