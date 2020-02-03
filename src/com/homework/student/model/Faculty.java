@@ -1,7 +1,7 @@
 package com.homework.student.model;
 
 public enum Faculty {
-    appliedMathematicsAndInformatics,
-    physics,
-    philosophy
+    APPLIED_MATHEMATICS_AND_INFORMATICS,
+    PHYSICS,
+    PHILOSOPHY
 }

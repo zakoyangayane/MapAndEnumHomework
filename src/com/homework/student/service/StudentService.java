@@ -12,21 +12,21 @@ public class StudentService {
 
     /*creating Student objects*/
     public final Student student1 = new Student("Aram", "Gabrielyan",
-            21, "091111111", Faculty.appliedMathematicsAndInformatics);
+            21, "091111111", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
     public final Student student2 = new Student("Gayane", "Zakoyan",
-            19, "092222222", Faculty.philosophy);
+            19, "092222222", Faculty.PHILOSOPHY);
     public final Student student3 = new Student("Ani", "Simonyan",
-            15, "093333333", Faculty.appliedMathematicsAndInformatics);
+            15, "093333333", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
     public final Student student4 = new Student("Aram", "Gabrielyan",
-            30, "094444444", Faculty.physics);
+            30, "094444444", Faculty.PHYSICS);
     public final Student student5 = new Student("Gayane", "Zakoyan",
-            46, "095555555", Faculty.physics);
+            46, "095555555", Faculty.PHYSICS);
     public final Student student6 = new Student("Ani", "Simonyan",
-            28, "096666666", Faculty.philosophy);
+            28, "096666666", Faculty.PHILOSOPHY);
     public final Student student7 = new Student("Gayane", "Zakoyan",
-            32, "097777777", Faculty.appliedMathematicsAndInformatics);
+            32, "097777777", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
     public final Student student8 = new Student("Ani", "Simonyan",
-            29, "098888888", Faculty.appliedMathematicsAndInformatics);
+            29, "098888888", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
 
     /*creating list of the students*/
     public List<Student> studentList = new ArrayList<>() {{
