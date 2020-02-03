@@ -41,8 +41,9 @@ public enum Month {
     }
 
     public void setDaysInMonth(int daysInMonth) {
-        if (daysInMonth >= 28)
+        if (daysInMonth >= 28) {
             this.daysInMonth = daysInMonth;
+        }
     }
 
     public static String getHolidaysInMonth(Month month) {
@@ -53,8 +54,9 @@ public enum Month {
     }
 
     public void setHolidaysInMonth(int... holidaysInMonth) {
-        if (holidaysInMonth.length <= this.daysInMonth)
+        if (holidaysInMonth.length <= this.daysInMonth) {
             this.holidaysInMonth = holidaysInMonth;
+        }
     }
 
     /*a method for checking whether a day is a public holiday or not*/
