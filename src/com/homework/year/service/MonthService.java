@@ -1,19 +1,19 @@
 package com.homework.year.service;
 
-import com.homework.year.model.MonthOfYear;
+import com.homework.year.model.Month;
 
 public class MonthService {
-    public final MonthOfYear JANUARY = MonthOfYear.JANUARY;
-    public final MonthOfYear FEBRUARY = MonthOfYear.February;
-    public final MonthOfYear MARCH = MonthOfYear.MARCH;
-    public final MonthOfYear APRIL = MonthOfYear.APRIL;
-    public final MonthOfYear MAY = MonthOfYear.MAY;
-    public final MonthOfYear JUNE = MonthOfYear.JUNE;
-    public final MonthOfYear JULY = MonthOfYear.JULY;
-    public final MonthOfYear AUGUST = MonthOfYear.AUGUST;
-    public final MonthOfYear SEPTEMBER = MonthOfYear.SEPTEMBER;
-    public final MonthOfYear OCTOBER = MonthOfYear.OCTOBER;
-    public final MonthOfYear NOVEMBER = MonthOfYear.NOVEMBER;
-    public final MonthOfYear DECEMBER = MonthOfYear.DECEMBER;
+    public final Month JANUARY = Month.JANUARY;
+    public final Month FEBRUARY = Month.February;
+    public final Month MARCH = Month.MARCH;
+    public final Month APRIL = Month.APRIL;
+    public final Month MAY = Month.MAY;
+    public final Month JUNE = Month.JUNE;
+    public final Month JULY = Month.JULY;
+    public final Month AUGUST = Month.AUGUST;
+    public final Month SEPTEMBER = Month.SEPTEMBER;
+    public final Month OCTOBER = Month.OCTOBER;
+    public final Month NOVEMBER = Month.NOVEMBER;
+    public final Month DECEMBER = Month.DECEMBER;
 
 }

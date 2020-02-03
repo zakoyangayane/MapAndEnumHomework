@@ -5,7 +5,7 @@ import com.homework.year.exception.NoSuchMonthException;
 
 import java.util.Arrays;
 
-public enum MonthOfYear {
+public enum Month {
     JANUARY(1, 31, 1, 20, 25),
     February(2, 29, 2, 14, 17),
     MARCH(3, 31, 8, 10, 17),
@@ -23,7 +23,7 @@ public enum MonthOfYear {
     private int daysInMonth;
     private int[] holidaysInMonth;
 
-    MonthOfYear(int value, int daysInMonth, int... holidaysInMonth) {
+    Month(int value, int daysInMonth, int... holidaysInMonth) {
         this.VALUE = value;
         setDaysInMonth(daysInMonth);
         setHolidaysInMonth(holidaysInMonth);
@@ -33,7 +33,7 @@ public enum MonthOfYear {
         return VALUE;
     }
 
-    public static int getDaysInMonth(MonthOfYear month) {
+    public static int getDaysInMonth(Month month) {
         if (month == null) {
             throw new NoSuchMonthException();
         }
@@ -45,7 +45,7 @@ public enum MonthOfYear {
             this.daysInMonth = daysInMonth;
     }
 
-    public static String getHolidaysInMonth(MonthOfYear month) {
+    public static String getHolidaysInMonth(Month month) {
         if (month == null) {
             throw new NoSuchMonthException();
         }
@@ -58,7 +58,7 @@ public enum MonthOfYear {
     }
 
     /*a method for checking whether a day is a public holiday or not*/
-    public static boolean checkWhetherHoliday(MonthOfYear month, int day) {
+    public static boolean checkWhetherHoliday(Month month, int day) {
         if (month == null) {
             throw new NoSuchMonthException();
         }
@@ -74,7 +74,7 @@ public enum MonthOfYear {
     }
 
     /*get the number of holidays in month*/
-    public static int numberOfHolidaysInMonth(MonthOfYear month) {
+    public static int numberOfHolidaysInMonth(Month month) {
         if (month == null) {
             throw new NoSuchMonthException();
         }
@@ -82,7 +82,7 @@ public enum MonthOfYear {
     }
 
     /*traverse the name of a month*/
-    public static String traverseName(MonthOfYear month) {
+    public static String traverseName(Month month) {
         if (month == null) {
             throw new NoSuchMonthException();
         }
