@@ -84,14 +84,17 @@ public enum Month {
     }
 
     /*traverse the name of a month*/
-    public static String traverseName(Month month) {
-        if (month == null) {
-            throw new NoSuchMonthException();
+    public static void traverseName(Month[] month) {
+//        if (month == null) {
+//            throw new NoSuchMonthException();
+//        }
+//        String traverse = "";
+//        for (int i = month.name().length() - 1; i >= 0; i--) {
+//            traverse += month.name().charAt(i);
+//        }
+//        return traverse.toLowerCase();
+        for (int i = 0; i < month.length; i++) {
+            System.out.println(month[i].name());
         }
-        String traverse = "";
-        for (int i = month.name().length() - 1; i >= 0; i--) {
-            traverse += month.name().charAt(i);
-        }
-        return traverse.toLowerCase();
     }
 }

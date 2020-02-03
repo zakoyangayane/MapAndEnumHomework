@@ -16,4 +16,6 @@ public class MonthService {
     public final Month NOVEMBER = Month.NOVEMBER;
     public final Month DECEMBER = Month.DECEMBER;
 
+    public final Month[] months = {JANUARY, FEBRUARY, MARCH, APRIL, MAY,
+            JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER};
 }
