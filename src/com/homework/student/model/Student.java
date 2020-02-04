@@ -1,8 +1,5 @@
 package com.homework.student.model;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 public class Student {
@@ -12,6 +9,14 @@ public class Student {
     private String phoneNumber;
     private Faculty faculty;
 
+    public Student(String firstName, String lastName, int age, String phoneNumber, Faculty faculty) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        setAge(age);
+        this.phoneNumber = phoneNumber;
+        this.faculty = faculty;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -20,12 +25,12 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public Student(String firstName, String lastName, int age, String phoneNumber, Faculty faculty) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        setAge(age);
-        this.phoneNumber = phoneNumber;
-        this.faculty = faculty;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public int getAge() {
@@ -54,13 +59,6 @@ public class Student {
         this.faculty = faculty;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -81,33 +79,4 @@ public class Student {
         return this.getFirstName() + " " + this.getLastName();
     }
 
-    /*getting students with the same full name, counting them and adding to a map*/
-    public static Map<Student, Integer> getStudentsNumberWithSameFullName(List<Student> studentList) {
-        Map<Student, Integer> studentsMap = new HashMap<>();
-        if (studentList != null) {
-            for (Student student : studentList) {
-                if (studentsMap.containsKey(student)) {
-                    studentsMap.put(student, studentsMap.get(student) + 1);
-                } else {
-                    studentsMap.put(student, 1);
-                }
-            }
-        }
-        return studentsMap;
-    }
-
-    /*getting number of students studying in the same faculty */
-    public static Map<Enum<Faculty>, Integer> getStudentsNumberFromSameFaculty(List<Student> studentList) {
-        Map<Enum<Faculty>, Integer> facultiesMap = new HashMap<>();
-        if (studentList != null) {
-            for (Student student : studentList) {
-                if (facultiesMap.containsKey(student.getFaculty())) {
-                    facultiesMap.put(student.getFaculty(), facultiesMap.get(student.getFaculty()) + 1);
-                } else {
-                    facultiesMap.put(student.getFaculty(), 1);
-                }
-            }
-        }
-        return facultiesMap;
-    }
 }

@@ -1,6 +1,5 @@
 package com.homework.student;
 
-import com.homework.student.model.Student;
 import com.homework.student.service.StudentService;
 
 public class Test {
@@ -9,11 +8,11 @@ public class Test {
         StudentService studentService = new StudentService();
 
         //print the number of students who have the same full name
-        studentService.printMap(Student.getStudentsNumberWithSameFullName(studentService.studentList));
+        studentService.printMap(StudentService.getStudentsNumberWithSameFullName(studentService.studentList));
         System.out.println();
 
         //print the number of students studying in the same faculty
-        studentService.printMap(Student.getStudentsNumberFromSameFaculty(studentService.studentList));
+        studentService.printMap(StudentService.getStudentsNumberFromSameFaculty(studentService.studentList));
         System.out.println();
 
     }
