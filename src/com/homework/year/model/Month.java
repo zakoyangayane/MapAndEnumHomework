@@ -58,6 +58,8 @@ public enum Month {
     public void setHolidaysInMonth(int... holidaysInMonth) {
         if (holidaysInMonth.length <= this.daysInMonth) {
             this.holidaysInMonth = holidaysInMonth;
+        } else {
+            throw new IllegalArgumentException("Holidays number can't be bigger than days number in month");
         }
     }
 
