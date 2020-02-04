@@ -6,15 +6,15 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Student {
-    private final String FIRST_NAME;
-    private final String LAST_NAME;
+    private String firstName;
+    private String lastName;
     private int age;
     private String phoneNumber;
     private Faculty faculty;
 
     public Student(String firstName, String lastName, int age, String phoneNumber, Faculty faculty) {
-        this.FIRST_NAME = firstName;
-        this.LAST_NAME = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         setAge(age);
         this.phoneNumber = phoneNumber;
         this.faculty = faculty;
@@ -46,12 +46,12 @@ public class Student {
         this.faculty = faculty;
     }
 
-    public String getFIRST_NAME() {
-        return FIRST_NAME;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getLAST_NAME() {
-        return LAST_NAME;
+    public String getLastName() {
+        return lastName;
     }
 
     @Override
@@ -59,18 +59,18 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return Objects.equals(FIRST_NAME, student.FIRST_NAME) &&
-                Objects.equals(LAST_NAME, student.LAST_NAME);
+        return Objects.equals(firstName, student.firstName) &&
+                Objects.equals(lastName, student.lastName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(FIRST_NAME, LAST_NAME);
+        return Objects.hash(firstName, lastName);
     }
 
     @Override
     public String toString() {
-        return this.getFIRST_NAME() + " " + this.getLAST_NAME();
+        return this.getFirstName() + " " + this.getLastName();
     }
 
     /*getting students with the same full name, counting them and adding to a map*/
