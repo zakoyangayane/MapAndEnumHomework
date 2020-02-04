@@ -12,6 +12,14 @@ public class Student {
     private String phoneNumber;
     private Faculty faculty;
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public Student(String firstName, String lastName, int age, String phoneNumber, Faculty faculty) {
         this.firstName = firstName;
         this.lastName = lastName;
