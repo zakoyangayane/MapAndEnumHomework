@@ -8,9 +8,9 @@ public class Main {
         MonthService monthService = new MonthService();
 
         //print number of holidays in some months
-        System.out.println("July has " + MonthService.numberOfHolidaysInMonth(Month.JULY)
+        System.out.println("July has " + monthService.numberOfHolidaysInMonth(Month.JULY)
                 + " holidays");
-        System.out.println("November has " + MonthService.numberOfHolidaysInMonth(Month.NOVEMBER)
+        System.out.println("November has " + monthService.numberOfHolidaysInMonth(Month.NOVEMBER)
                 + " holidays");
 
         //print holidays of a april
@@ -21,10 +21,10 @@ public class Main {
 
         //traversing and printing all month names
         System.out.println("Traversed names of months");
-        MonthService.traverseName(monthService.months);
+        monthService.traverseName(monthService.months);
 
         //check whether the current day is a public holiday or not
-        MonthService.printMessageOfWhetherHoliday(Month.MARCH, 21);
-        MonthService.printMessageOfWhetherHoliday(Month.MARCH, 8);
+        monthService.printMessageOfWhetherHoliday(Month.MARCH, 21);
+        monthService.printMessageOfWhetherHoliday(Month.MARCH, 8);
     }
 }

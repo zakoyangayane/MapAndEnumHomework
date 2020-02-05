@@ -8,7 +8,7 @@ public class MonthService {
     public final Month[] months = Month.values();
 
     /*a method for checking whether a day is a public holiday or not*/
-    public static boolean checkWhetherHoliday(Month month, int day) {
+    public boolean checkWhetherHoliday(Month month, int day) {
         if (month == null) {
             throw new NoSuchMonthException();
         }
@@ -23,7 +23,7 @@ public class MonthService {
         return false;
     }
 
-    public static void printMessageOfWhetherHoliday(Month month, int day) {
+    public void printMessageOfWhetherHoliday(Month month, int day) {
         System.out.print(month.name() + " " + day);
         if (checkWhetherHoliday(month, day)) {
             System.out.println(" is a holiday");
@@ -33,7 +33,7 @@ public class MonthService {
     }
 
     /*get the number of holidays in month*/
-    public static int numberOfHolidaysInMonth(Month month) {
+    public int numberOfHolidaysInMonth(Month month) {
         if (month == null) {
             throw new NoSuchMonthException();
         }
@@ -41,7 +41,7 @@ public class MonthService {
     }
 
     /*traverse the name of a month*/
-    public static void traverseName(Month[] month) {
+    public void traverseName(Month[] month) {
         for (int i = 0; i < month.length; i++) {
             System.out.println(month[i].name());
         }
