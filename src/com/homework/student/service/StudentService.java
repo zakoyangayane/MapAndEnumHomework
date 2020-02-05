@@ -6,36 +6,39 @@ import com.homework.student.model.Student;
 import java.util.*;
 
 public class StudentService {
+    public List<Student> studentList;
 
-    /*creating Student objects*/
-    public final Student student1 = new Student("Aram", "Gabrielyan",
-            21, "091111111", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
-    public final Student student2 = new Student("Gayane", "Zakoyan",
-            19, "092222222", Faculty.PHILOSOPHY);
-    public final Student student3 = new Student("Ani", "Simonyan",
-            15, "093333333", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
-    public final Student student4 = new Student("Aram", "Gabrielyan",
-            30, "094444444", Faculty.PHYSICS);
-    public final Student student5 = new Student("Gayane", "Zakoyan",
-            46, "095555555", Faculty.PHYSICS);
-    public final Student student6 = new Student("Ani", "Simonyan",
-            28, "096666666", Faculty.PHILOSOPHY);
-    public final Student student7 = new Student("Gayane", "Zakoyan",
-            32, "097777777", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
-    public final Student student8 = new Student("Ani", "Simonyan",
-            29, "098888888", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
+    public StudentService() {
+        /*creating Student objects*/
+        final Student student1 = new Student("Aram", "Gabrielyan",
+                21, "091111111", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
+        final Student student2 = new Student("Gayane", "Zakoyan",
+                19, "092222222", Faculty.PHILOSOPHY);
+        final Student student3 = new Student("Ani", "Simonyan",
+                15, "093333333", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
+        final Student student4 = new Student("Aram", "Gabrielyan",
+                30, "094444444", Faculty.PHYSICS);
+        final Student student5 = new Student("Gayane", "Zakoyan",
+                46, "095555555", Faculty.PHYSICS);
+        final Student student6 = new Student("Ani", "Simonyan",
+                28, "096666666", Faculty.PHILOSOPHY);
+        final Student student7 = new Student("Gayane", "Zakoyan",
+                32, "097777777", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
+        final Student student8 = new Student("Ani", "Simonyan",
+                29, "098888888", Faculty.APPLIED_MATHEMATICS_AND_INFORMATICS);
 
-    /*creating list of the students*/
-    public List<Student> studentList = new ArrayList<>() {{
-        add(student1);
-        add(student2);
-        add(student3);
-        add(student4);
-        add(student5);
-        add(student6);
-        add(student7);
-        add(student8);
-    }};
+        /*creating list of the students*/
+        studentList = new ArrayList<>() {{
+            add(student1);
+            add(student2);
+            add(student3);
+            add(student4);
+            add(student5);
+            add(student6);
+            add(student7);
+            add(student8);
+        }};
+    }
 
     /*printing the map*/
     public void printMap(Map map) {
@@ -49,7 +52,7 @@ public class StudentService {
     }
 
     /*getting students with the same full name, counting them and adding to a map*/
-    public static Map<Student, Integer> getStudentsNumberWithSameFullName(List<Student> studentList) {
+    public Map<Student, Integer> getStudentsNumberWithSameFullName(List<Student> studentList) {
         Map<Student, Integer> studentsMap = new HashMap<>();
         if (studentList != null) {
             for (Student student : studentList) {
@@ -64,7 +67,7 @@ public class StudentService {
     }
 
     /*getting number of students studying in the same faculty */
-    public static Map<Enum<Faculty>, Integer> getStudentsNumberFromSameFaculty(List<Student> studentList) {
+    public Map<Enum<Faculty>, Integer> getStudentsNumberFromSameFaculty(List<Student> studentList) {
         Map<Enum<Faculty>, Integer> facultiesMap = new HashMap<>();
         if (studentList != null) {
             for (Student student : studentList) {
