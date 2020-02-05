@@ -8,11 +8,11 @@ public class Test {
         StudentService studentService = new StudentService();
 
         //print the number of students who have the same full name
-        studentService.printMap(studentService.getStudentsNumberWithSameFullName(studentService.studentList));
+        studentService.printMap(studentService.getStudentsMapWithSameFullNameAndTheirCount(studentService.studentList));
         System.out.println();
 
         //print the number of students studying in the same faculty
-        studentService.printMap(studentService.getStudentsNumberFromSameFaculty(studentService.studentList));
+        studentService.printMap(studentService.getStudentsMapFromSameFacultyAndTheirCount(studentService.studentList));
         System.out.println();
 
     }
