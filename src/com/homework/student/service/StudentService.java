@@ -52,7 +52,7 @@ public class StudentService {
     }
 
     /*getting students with the same full name, counting them and adding to a map*/
-    public Map<Student, Integer> getStudentsMapWithSameFullNameAndTheirCount(List<Student> studentList) {
+    public Map<Student, Integer> getStudentsMapWithSameFullNameAndTheirCount() {
         Map<Student, Integer> studentsMap = new HashMap<>();
         if (studentList != null) {
             for (Student student : studentList) {
@@ -67,7 +67,7 @@ public class StudentService {
     }
 
     /*getting number of students studying in the same faculty */
-    public Map<Enum<Faculty>, Integer> getStudentsMapFromSameFacultyAndTheirCount(List<Student> studentList) {
+    public Map<Enum<Faculty>, Integer> getStudentsMapFromSameFacultyAndTheirCount() {
         Map<Enum<Faculty>, Integer> facultiesMap = new HashMap<>();
         if (studentList != null) {
             for (Student student : studentList) {
